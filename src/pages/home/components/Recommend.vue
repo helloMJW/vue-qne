@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key='item.id' >
+      <li class="item border-bottom" v-for="item of list" :key='item.id' >
         <img class="item-img" :src='item.imgUrl' alt="">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,30 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/f25ac054eec3804dc8d65eac.jpg_200x200_a008b6ca.jpg',
-        title: '海洋奇梦s馆',
-        desc: '海洋奇梦馆海洋奇梦馆海洋奇梦馆海洋洋奇梦馆海洋洋奇梦馆海洋'
-      }, {
-        id: '002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/f25ac054eec3804dc8d65eac.jpg_200x200_a008b6ca.jpg',
-        title: '海洋奇s梦馆',
-        desc: '海洋奇梦馆海洋奇梦馆海洋奇梦馆海洋洋奇梦馆海洋洋奇梦馆海洋'
-      }, {
-        id: '003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/f25ac054eec3804dc8d65eac.jpg_200x200_a008b6ca.jpg',
-        title: '海洋奇a梦馆',
-        desc: '海洋奇梦馆海洋奇梦馆海洋奇梦馆海洋洋奇梦馆海洋洋奇梦馆海洋'
-      }, {
-        id: '004',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/201307/18/f25ac054eec3804dc8d65eac.jpg_200x200_a008b6ca.jpg',
-        title: '海洋奇q梦馆',
-        desc: '海洋奇梦馆海洋奇梦馆海洋奇梦馆海洋洋奇梦馆海洋洋奇梦馆海洋'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
