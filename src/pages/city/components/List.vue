@@ -30,7 +30,12 @@
         :ref="key"
       >
         <div class="title border-topbottom">{{key}}</div>
-        <div class="item-list" v-for="innerItem of item" :key="innerItem.id">
+        <div
+          class="item-list"
+          v-for="innerItem of item"
+          :key="innerItem.id"
+          @click="handleCityClick(innerItem.name)"
+        >
           <div class="item border-bottom">{{innerItem.name}}</div>
         </div>
       </div>
@@ -49,7 +54,8 @@ export default {
   },
   methods: {
     handleCityClick (city) {
-      this.$store.dispatch('changeCity', city)
+      this.$store.commit('changeCity', city)
+      this.$router.push('/')
     }
   },
   watch: {
