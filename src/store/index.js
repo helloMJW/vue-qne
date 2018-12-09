@@ -11,10 +11,5 @@ try {
 
 export default new Vuex.Store({
   state,
-  mutations,
-  getters: {
-    coubleCity (state) {
-      return state.city + ' ' + state.city
-    }
-  }
+  mutations
 })
